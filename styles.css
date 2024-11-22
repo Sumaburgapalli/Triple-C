@@ -69,12 +69,6 @@ header.hero {
     text-align: center;
     padding: 150px 20px; /* Space to accommodate the navbar */
     margin-top: 80px; /* Ensures no overlap with navbar */
-    position: relative;
-}
-
-.hero-content {
-    margin-top: 50px;
-    animation: fadeIn 2s ease-out;
 }
 
 .hero-content h1 {
@@ -88,8 +82,7 @@ header.hero {
     margin-bottom: 30px;
     font-size: 1.3rem;
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
 }
 
 .cta-btn {
@@ -118,11 +111,19 @@ h2 {
     margin-bottom: 20px;
 }
 
+/* Products Section */
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     margin-top: 40px;
+}
+
+.products-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
 }
 
 .product-card {
@@ -130,6 +131,7 @@ h2 {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -139,18 +141,23 @@ h2 {
 }
 
 .product-card h3 {
-    font-size: 1.6rem;
-    margin-bottom: 10px;
+    font-size: 1.5rem;
+    margin: 15px 0;
 }
 
+.product-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Contact Form */
 .contact-card {
     background-color: #fff;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
 }
 
 .contact-card form {
@@ -193,16 +200,4 @@ footer {
 footer p {
     font-size: 1rem;
     color: #bbb;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
